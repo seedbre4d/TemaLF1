@@ -11,4 +11,4 @@ def rhymes(w1, w2):
 
 w1 = input()
 w2 = input()
-print(w1, "si", w2, Culoare.blue + "rimeaza" if rhymes(w1, w2)else Culoare.red + "nu rimeaza")
+print("{} si {} {}{}" .format(w1,w2,Culoare.blue,"rimeaza" if rhymes(w1,w2)else Culoare.red+"nu rimeaza"))
