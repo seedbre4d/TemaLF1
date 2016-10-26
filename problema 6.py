@@ -9,16 +9,27 @@ fara vector de  cuvinte - !cuvintele in sine nu se inverseaza!)
 '''
 
 
-# a doua parte n-am inteles-o
-
-def citire(n: int):
-    wordlist = []
+def citire_p1(n: int):
+    word_list = []
     for i in range(n):
-        wordlist.append(input())
-    return wordlist
+        word_list.append(input())
+    return word_list
 
 
-wordlist = citire(4)
-wordlist = sorted(wordlist)
+def citire_p2(word_list, n):
+    word_list.append(input())
+    if n > 1:
+        citire_p2(word_list, n - 1)
+    print(word_list[n - 1])
 
-print(wordlist)
+
+print("Marime: ", end='')
+n = int(input())
+
+print("     Prima parte ")
+word_list = citire_p1(n)
+word_list = sorted(word_list)
+print(word_list, '\n\n')
+print("     A doua parte")
+
+citire_p2([], n)

@@ -1,6 +1,7 @@
 # Avand un cuvant x si un alfabet V sa se verifice daca x este cuvant peste V.
 
-from culori import  Culoare
+from culori import Culoare
+
 
 def functie(x, V):
     for ch in x:
@@ -19,4 +20,4 @@ def functie(x, V):
 alfabet = 'tam'
 cuvant = 'mama tata'
 
-print('mama si tata', culoare.blue if functie(cuvant,alfabet) else culoare.red+'nu','este')
+print('mama si tata', Culoare.blue if functie(cuvant, alfabet) else Culoare.red + 'nu', 'este')

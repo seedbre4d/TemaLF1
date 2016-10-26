@@ -3,10 +3,10 @@
 # citite de la stanga la dreapta).
 
 
-def prefixeproprii(word: str):
+def prefixe_proprii(word: str):
     for ch in range(len(word) + 1):
         print(word[0:ch])
 
 
 word = input()
-prefixeproprii(word)
+prefixe_proprii(word)
